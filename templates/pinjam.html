@@ -1,0 +1,40 @@
+
+{% block content %}
+  <div class="card mb-3">
+    <div class="card-header"> <i class="fa fa-table"></i> Status Peminjaman</div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+                <th>Id Pinjam</th>
+                <th>Judul</th>
+                <th>Nama</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {% for buk in buku %}
+              <tr>
+                <td>
+                    <h6>{{ buk.id }}</a></h6>
+                </td>
+                <td>
+                    <h6>{{ buk.judul }}</h6>
+                </td>
+                <td>
+                    <h6>{{ buk.pengarang }}</h6>
+                </td>
+                <td>
+                  <h6>{{ buk.penerbit }}</h6>
+                </td>
+              </tr>
+             {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>  
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% block breadcrumb %}
+  <!-- Breadcrumbs-->
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="/">Dashboard</a>
+    </li>
+    <li class="breadcrumb-item active">My Dashboard</li>
+  </ol>
+{% endblock %}
+<!--   {% if url_for %} -->
+    {% include "pinjam.html" %}
+<!--   {% elif url_for %} -->
+    <!-- {% include "buku.html" %} -->
+<!--   {% else %} -->
+    <!-- {% include "anggota.html" %} -->
+<!--   {% endif %} -->
+
+{% endblock content %}

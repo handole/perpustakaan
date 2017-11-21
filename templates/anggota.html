@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% block breadcrumb %}
+  <!-- Breadcrumbs-->
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="/">Dashboard</a>
+    </li>
+    <li class="breadcrumb-item active">Anggota</li>
+  </ol>
+{% endblock %}
+
+  <div class="card mb-3">
+    <div class="card-header"> <i class="fa fa-table"></i> Data Anggota Pustaka</div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+                <th>Id Anggota</th>
+                <th>Nama</th>
+                <th>Alamat</th>
+
+              </tr>
+            </thead>
+
+            <tbody>
+              {% for ang in anggota %}
+              <tr>
+                <td>
+                    <h6>{{ ang.id }}</a></h6>
+                </td>
+                <td>
+                    <h6>{{ ang.nama }}</h6>
+                </td>
+                <td>
+                    <h6>{{ ang.alamat }}</h6>
+                </td>
+                
+              </tr>
+             {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>  
+{% endblock %}
